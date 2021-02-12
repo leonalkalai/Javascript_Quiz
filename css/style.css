@@ -1,0 +1,291 @@
+html,body{
+    overflow-x: hidden;
+}
+:root {
+    --clr-border: #333;
+    --cln-border: #ff5722;
+    --aqua: #00d6ca;
+}
+body{
+    font-family: 'Varela Round', sans-serif;
+    text-align: center;
+    padding: 0;
+    margin: 0;
+    -webkit-touch-callout: none; 
+    -webkit-user-select: none;
+    -khtml-user-select: none; 
+    -moz-user-select: none; 
+    -ms-user-select: none; 
+    user-select: none; 
+    background: -webkit-linear-gradient( 45deg, #001730, #001730 80%);
+}
+#homepage{
+    background-image: url(../images/quiz.svg);
+    background-repeat: no-repeat;
+    background-size:80%;
+    background-position: center;
+    width: 100%;
+    height: 50vh;
+    min-width: 100%;
+    margin: 0 auto;
+    padding: 0;
+    background-color: #001730;
+}
+.hidden{
+    display: none;
+    visibility: hidden;
+    opacity: 0;
+}
+#sum{
+    display: inline-block;
+}
+#sum p{
+    font-size: 2em;
+    background: #00d6ca;
+    padding-left: 5px;
+    padding-right: 5px;
+    margin-bottom: 0;
+}
+#pagenumber,#pagetotal {
+    font-size: 1.5em;
+    display: inline-block;
+    padding: .5rem .75rem;
+    font-weight: 700;
+    background-color: #faebd7;
+}
+.aqua{
+    color:var(--aqua)!important
+}
+.btn , #pagecounter, #pagenumber,#pagetotal,#sum{
+    vertical-align: middle;
+    display: inline-block;
+    margin-top: 5px;
+    margin-bottom: 5px;
+}
+.btn{color:#dce8ff;}
+.btn-check:focus+.btn, .btn:focus {
+    outline: 0;
+    box-shadow:none!important;
+    /* box-shadow: 0 0 0 0.05rem rgb(0 52 118); */
+}
+.btn-check:focus+.btn > i, .btn:focus > i{
+    background: #03a9f4;
+    border-radius: 15px;
+}
+#pagecounter{
+    font-size: 1.5em;
+}
+#pagenumber{
+    background-color: #003476;
+    color: white;
+    font-size: 1.2em;
+}
+.btn i{
+    font-size: 2em;
+}
+
+.dashedborder{
+    background-position:  0 0, 0 0, 100% 0, 0 100%;
+    background-size: 3px 100%, 100% 3px, 3px 100% , 100% 3px;
+    background-repeat: no-repeat;
+    background-image:
+    repeating-linear-gradient(45deg, var(--clr-border), var(--clr-border) 10px, transparent 10px, transparent 20px), 
+    repeating-linear-gradient(135deg, var(--clr-border), var(--clr-border) 10px, transparent 10px, transparent 20px), 
+    repeating-linear-gradient(225deg, var(--clr-border), var(--clr-border) 10px, transparent 10px, transparent 20px), 
+    repeating-linear-gradient(315deg, var(--clr-border), var(--clr-border) 10px, transparent 10px, transparent 20px) 
+;
+}
+
+.dashedbordercolored{
+    background-position:  0 0, 0 0, 100% 0, 0 100%;
+    background-size: 3px 100%, 100% 3px, 3px 100% , 100% 3px;
+    background-repeat: no-repeat;
+    background-image:
+    repeating-linear-gradient(45deg, var(--cln-border), var(--cln-border) 10px, transparent 10px, transparent 20px), 
+    repeating-linear-gradient(135deg, var(--cln-border), var(--cln-border) 10px, transparent 10px, transparent 20px), 
+    repeating-linear-gradient(225deg, var(--cln-border), var(--cln-border) 10px, transparent 10px, transparent 20px), 
+    repeating-linear-gradient(315deg, var(--cln-border), var(--cln-border) 10px, transparent 10px, transparent 20px) 
+;
+    color: white;
+}
+
+.question.tab {
+    box-shadow: 0px 1px 0px #ccc, 0px 2px 0px #c9c9c9, 0px 3px 0px #bbb, 0px 4px 0px #b9b9b9, 0px 5px 0px #aaa, 0px 6px 1px rgb(0 0 0 / 10%), 0px 0px 5px rgb(0 0 0 / 10%), 0px 1px 3px rgb(0 0 0 / 30%), 0px 3px 5px rgb(0 0 0 / 20%), -4px 8px 8px rgb(0 0 0 / 10%), -8px 16px 16px rgb(0 0 0 / 37%), -16px 32px 32px rgb(0 0 0 / 25%), -32px 64px 64px rgb(0 0 0 / 25%);
+}
+
+.question {
+    display: inline-block;
+    position: relative;
+    z-index: 1;
+    width: 95%;
+    height: auto;
+    margin: 20px;
+    padding: 25px;
+    border-radius: 20px;
+    background: linear-gradient(
+0.06deg
+, #fafafa 0%, #f6f6f6 29.62%, #eaeaea 58.47%, #d7d7d7 86.92%, #cccccc 99.22%);
+    box-shadow: -4px 8px 8px rgb(0 0 0 / 10%), -8px 16px 16px rgb(0 0 0 / 10%), -16px 32px 32px rgb(0 0 0 / 15%), -32px 64px 64px rgb(0 0 0 / 25%);
+}
+.question:before {
+    content: '';
+    position: absolute;
+    z-index: -1;
+    top: 0;
+    left: 0;
+    right: 0;
+    bottom: 0;
+    margin: 0;
+}
+
+
+ #itemlist > li > ul > li > p{
+    background: -webkit-linear-gradient( -180deg, #03a9f4, #dbe8ff -80%);
+    border: 1px solid #deebff;
+    display: block;
+    line-height: 1.625;
+    font-size: 1rem;
+    position: relative;
+    width: 95%;
+    cursor: pointer;
+    margin: 0 auto;
+} 
+
+
+input[type="radio" i] {
+    margin: 3px 3px 0px 5px;
+}
+input[type='radio']:after {
+    width: 15px;
+    height: 15px;
+    border-radius: 15px;
+    top: -3px;
+    left: -1px;
+    position: relative;
+    background-color: #d1d3d1;
+    content: '';
+    display: inline-block;
+    visibility: visible;
+    border: 2px solid black;
+}
+
+input[type='radio']:checked:after {
+    width: 15px;
+    height: 15px;
+    border-radius: 15px;
+    top: -3px;
+    left: -1px;
+    position: relative;
+    background-color: #000000;
+    content: '';
+    display: inline-block;
+    visibility: visible;
+    border: 4px solid #d1d3d1;
+}
+.btn:focus .btnalert{
+    background:#f44336;
+}
+#itemlist > li > ul > li {
+    background: -webkit-linear-gradient( 302deg, #003476, #003476 80%)!important;
+    padding: .75rem .75rem .75rem!important;
+}
+ul, li{
+    margin: 0 auto!important;
+    text-align: center!important;
+    list-style: none!important;
+    padding:0!important;  
+}
+
+.container{
+    width: 100%;
+    padding: 0!important;
+}
+h1{
+    background: #003476;
+    color: #fff;
+    line-height: 60px;
+    height: 60px;
+    padding: 0;
+    margin: 0;
+    font-size: 1.4em;
+}
+.gradient-text {
+    background: -webkit-gradient(linear, left top, right top, from(#effaff), to(#d9e7ff));
+    background: linear-gradient(90deg , #effaff 0%, #d9e7ff 100%);
+}
+.gradient-text h1 {
+    background: -webkit-linear-gradient(45deg, #03a9f4, #09009f 80%);
+    -webkit-background-clip: text;
+    -webkit-text-fill-color: transparent;
+    font-size: 2em;
+    font-weight: 800;
+}
+
+
+h2{
+    padding: 15px;
+    background-color: white;
+}
+h3{
+    padding: 10px;
+    background: -webkit-linear-gradient( 45deg, #ffffff, #f0f8ff 80%);
+    margin: 0;
+}
+p{
+   
+    text-decoration: none;
+ 
+}
+
+#mybutton ,#startbutton{
+    background-color: #003476;
+    padding: .75rem 2rem;
+    color: #7fffd4;
+    text-transform: uppercase;
+    font-weight: 700;
+    border: none;
+    
+}
+#startbutton{
+    position: absolute;
+    top:50%;
+    left:31%;
+    outline-color: #01d6ca;
+    outline: dashed;
+    transition: all 0.5ms linear;
+}
+#startbutton:hover{
+    transform: scale(1.1);
+    transition: all 0.5ms linear;
+}
+
+#black.black{
+    color:rgb(28, 36, 136);
+}
+#black{
+  color:black;  
+} 
+.red{
+    color: red;
+}
+.white{
+    color: #ffffff;
+    transition: all 0.5s;
+}
+label{
+    text-transform: uppercase!important;
+     
+}
+/* 
+Max width before this PARTICULAR table gets nasty
+This query will take effect for any screen smaller than 760px
+and also iPads specifically.
+*/
+@media 
+only screen and (max-width: 760px),
+(min-device-width: 768px) and (max-device-width: 1024px)  {
+	
+	
+
+}
+

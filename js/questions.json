@@ -1,0 +1,88 @@
+[
+    {
+      "question": "Πώς δημιουργούμε ένα αντικείμενο στην Javascript;",
+      "answers": [
+        {
+          "text": "Χρησιμοποιώντας αγκύλες [] και βάζοντας τις τιμές χωρισμένες με κόμμα",
+          "correct": false
+        },
+        {
+          "text": "Χρησιμοποιώντας αγκιστρα {} και βάζοντας τις τιμές χωρισμένες με κόμμα",
+          "correct": false
+        },
+        {
+          "text": "Χρησιμοποιώντας αγκύλες {} και βάζοντας κλειδιά και τιμές, χωρισμένα μεταξύ τους με άνω-κάτω τελεία και τα ζευγάρια αυτά χωρισμένα μεταξύ τους με κόμμα",
+          "correct": true
+        },
+        {
+          "text": "Χρησιμοποιώντας παρενθέσεις () και βάζοντας τις τιμές χωρισμένες με κόμμα",
+          "correct": false
+        }
+      ]
+    },
+    {
+      "question": "Τι θα μας επιστρέψει το [1,2,3,4,5].map(x=>x*2);",
+      "answers": [
+        {
+          "text": "[1,2,3,4,5]",
+          "correct": false
+        },
+        {
+          "text": "[2,4,6,8,10]",
+          "correct": true
+        },
+        {
+          "text": "[1,4,9,16,25]",
+          "correct": false
+        },
+        {
+          "text": "[0.5, 1, 1.5, 2, 2.5]",
+          "correct": false
+        }
+      ]
+    }
+    ,
+    {
+      "question": "Πως θα εκτυπώσετε 'Hello' στην κονσόλα της Javascript;",
+      "answers": [
+        {
+          "text": "alert('Hello')",
+          "correct": false
+        },
+        {
+          "text": "console.log(hello)",
+          "correct": false
+        },
+        {
+          "text": "console.log('hello')",
+          "correct": true
+        },
+        {
+          "text": "hello",
+          "correct": false
+        }
+      ]
+    }
+    ,
+    {
+      "question": "Πως δηλώνουμε ένα script με όνομα main στην html;",
+      "answers": [
+        {
+          "text": "< script href='main.js'></script>",
+          "correct": false
+        },
+        {
+          "text": "< script src='main.js'></script>",
+          "correct": true
+        },
+        {
+          "text": "< script src='main.js'/>",
+          "correct": false
+        },
+        {
+          "text": "script src=main.js",
+          "correct": false
+        }
+      ]
+    }
+  ]
