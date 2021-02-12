@@ -248,7 +248,7 @@ p{
 }
 #startbutton{
     position: absolute;
-    top:50%;
+    top: 65%!important;  
     left:31%;
     outline-color: #01d6ca;
     outline: dashed;
@@ -285,7 +285,11 @@ and also iPads specifically.
 only screen and (max-width: 760px),
 (min-device-width: 768px) and (max-device-width: 1024px)  {
 	
-	
+	#homepage {
+        background-size: contain!important;
+        margin: 5em auto!important;  
+    }
+
 
 }
 
