@@ -68,11 +68,11 @@
       "question": "Πως δηλώνουμε ένα script με όνομα main στην html;",
       "answers": [
         {
-          "text": "< script href='main.js'></script>",
+          "text": "< script href='main.js'>< /script>",
           "correct": false
         },
         {
-          "text": "< script src='main.js'></script>",
+          "text": "< script src='main.js'>< /script>",
           "correct": true
         },
         {
