@@ -159,6 +159,7 @@ const getData = function() {
                 prevPage();
             }
             else{
+                $("#btn_prev").focus();
                 $('#btn_prev:focus > i').addClass("btnalert");
                 return;
              }
@@ -172,6 +173,7 @@ const getData = function() {
                 nextPage();
             }
             else{
+                $("#btn_next").focus();
                 $('#btn_next:focus > i').addClass("btnalert");
                 return;
              }
