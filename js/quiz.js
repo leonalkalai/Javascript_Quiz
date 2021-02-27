@@ -81,6 +81,7 @@ const getData = function() {
                shuffleElements(answerslist); //shuffle elements
        
                checkAnswer();
+               
              
                $("input[type='radio']").change(function(){
                     $("input[type='radio']").prop("disabled", true);
@@ -92,17 +93,21 @@ const getData = function() {
                         $el.siblings().prop("disabled",false);
                     }
                 });  
-         
+               
             }
      
             page_span.html(page);
             page == 1?btn_prev.hide():btn_prev.show();
-            page == numPages()?btn_next.hide():btn_next.show();
+            page == numPages()?btn_next.hide():btn_next.hide();
            
             $("input[type='radio']").change(function(){
                 if($('input[type="radio"]').is(":checked")) {  
                     if( page_span.html()==data.length.toString()){
                         $("#sum").html("<button id='mybutton'>Δείξε αποτελέσματα</button></div>"); 
+                        $("#mybutton").delay(1000).queue(function() {
+                            $(this).trigger('click');
+                            $(this).dequeue();
+                         });
                     }
                     else{
                         $("#sum").html("");
@@ -154,17 +159,20 @@ const getData = function() {
         $('#btn_prev').click( function(e) {
             e.preventDefault();
             $("#btn_next").removeClass("animate__animated animate__infinite animate__heartBeat done").blur();
-            if($('input[type="radio"]').is(":checked")) {   
-                $('#btn_prev:focus > i').removeClass("btnalert");
+            //if($('input[type="radio"]').is(":checked")) {   
+               // $('#btn_prev:focus > i').removeClass("btnalert");
                 prevPage();
-            }
-            else{
-                $("#btn_prev").focus();
-                $('#btn_prev:focus > i').addClass("btnalert");
-                return;
-             }
-              return false;
+            //}
+            // else{
+            //     $("#btn_prev").focus();
+            //     $('#btn_prev:focus > i').addClass("btnalert");
+            //     return;
+            //  }
+              //return false;
         });
+       
+        
+        //$('#btn_next').css('pointer-events','none');
         $('#btn_next').click( function(e) {
             e.preventDefault(); 
             $("#btn_next").removeClass("animate__animated animate__infinite animate__heartBeat done").blur();
@@ -199,8 +207,12 @@ function checkAnswer() {
                     if ($(this).parent(".question.tab").hasClass("checked")) {
                         correct_answers.push(pointarray);
                         pointarray.push(thecorrect_answer);
-                        $("#btn_next").addClass("animate__animated animate__infinite animate__heartBeat done");
-                      }
+                        $("#btn_next").addClass("animate__animated animate__infinite animate__heartBeat done"); 
+                        $("#btn_next").delay(1000).queue(function() {
+                            $(this).trigger('click');
+                            $(this).dequeue();
+                         });
+                    }
                       else{
                           return;
                       }
@@ -223,3 +235,4 @@ function shuffleElements(el) {
         $(el).append(elements.splice(Math.floor(Math.random() * elements.length), 1)[0]);
     }
 }
+
