@@ -106,10 +106,11 @@ let test_results = (data) => { // display test results and restart
             ${ correct_answers.map((el,index) => 
                 `
                     <li class="item">
-                        <div><h4>Ερώτηση <p class="answerindex">[ ${index+1} ]</p></h4><p class="question result">${encode(el[1])}</p/></div> 
+                        <div><h4>Ερώτηση <p class="answerindex">[ ${index+1} ]</p></h4><i class="fas fa-long-arrow-alt-down"></i><p class="question result">${encode(el[1])}</p/></div> 
                         <div><h4 class=answer ${el[0]==1?'white':'red'}>Απαντήσατε ${el[0]==1?"σωστά":"λάθος"}<i class="far fa-${el[0]==1?"check":"times"}-circle"></i></h4>
+                        <i class="fas fa-long-arrow-alt-down"></i>
                         <p class="question result">${encode(el[2])}</p/></div>   
-                        <div><h4>Σωστή απάντηση</h4><p class="question result">${el[3]}</p/></div>  
+                        <div><h4>Σωστή απάντηση</h4><i class="fas fa-long-arrow-alt-down"></i><p class="question result">${el[3]}</p/></div>  
                     </li> 
                         <div class="colorblock"></div>   
             `).join("\n")}
