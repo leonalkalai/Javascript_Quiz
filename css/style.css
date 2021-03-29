@@ -325,8 +325,16 @@ input[type='radio']:checked:after {
 #answerlist > li > ul > li > div{
     display: inline-block;
     width: 100%;
+    border: 5px #FAFF7F solid;
+    padding: 8px;
+    border-bottom: #01d6ca 5px solid;
 }
 
+.fas{
+    display: block!important;
+    color: aliceblue;
+    font-size: 1.5em;
+}
 .hidden{
     display: none;
     visibility: hidden;
